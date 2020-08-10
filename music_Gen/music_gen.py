@@ -35,7 +35,7 @@ def read_midi(file):
     return np.array(notes)
 
 
-path = '/Users/singhyogendra/randomgen/AllInOne-Generator/schubert/'
+path = '/AllInOneGenerator/schubert/'
 
 # read all the filenames
 files = [i for i in os.listdir(path) if i.endswith(".mid")]
