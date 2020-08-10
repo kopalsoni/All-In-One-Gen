@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
-
 {% block content %}
 <div class="jumbotron">
-    <h1 class="display-4">Hello, Stranger.</h1>
-    <p class="text-info" class="lead">{{ data }}</p>
+    <h4 class="display-4">Hello, Stranger.</h4>
+    <h2 class="text-info">{{ data }}</h2>
     <hr class="my-4">
     <p class="font-weight-lighter">My wisdom is limitless... Click the button for more!</p>
     <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Get Wiser</a>
