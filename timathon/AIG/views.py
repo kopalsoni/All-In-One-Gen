@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import requests
 import json
-
+from . import quotes
 
 def home(request):
     def random_quote():
@@ -10,6 +10,6 @@ def home(request):
         x = json.loads(response.text)
         return x["quote"]["body"]
 
-    query = random_quote()
+    query = quotes.random_quote()
     print(query)
     return render(request, "home.html", {"data": query})
