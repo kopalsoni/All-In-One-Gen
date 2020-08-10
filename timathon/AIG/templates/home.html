@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="jumbotron">
     <h4 class="display-4">Hello, Stranger.</h4>
@@ -7,4 +8,7 @@
     <p class="font-weight-lighter">My wisdom is limitless... Click the button for more!</p>
     <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Get Wiser</a>
 </div>
+
+<!--TODO have to design image properly-->
+<center><img src="{% static 'AIG/temp.jpg'%}" width="50%" height="50%"></center>
 {% endblock %}
