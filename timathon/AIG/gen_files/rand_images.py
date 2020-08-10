@@ -46,7 +46,7 @@ def random_images():
 
     img = buildImg()
     # Ensure it has the right dimensions, dX by dY by 3
-    img = np.tile(img, (dX / img.shape[0], dY / img.shape[1], 3 / img.shape[2]))
+    img = np.tile(img, (dX // img.shape[0], dY // img.shape[1], 3 // img.shape[2]))
 
     # Convert to 8-bit, send to PIL and save
     img8Bit = np.uint8(np.rint(img.clip(0.0, 2.0) * 255.0))
