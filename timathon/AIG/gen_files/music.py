@@ -5,18 +5,17 @@ from pydub import AudioSegment
 # parameter choice for length of song
 def music_gen(choice):
     path = os.path.split(os.getcwd())[0]
+    pathx = os.path.split(os.getcwd())[0]
     path += "/timathon/AIG/static/AIG/tempmusic/"
     count = 0
     # melody
-    # TODO add relative path for --bundle_file and __primer_midi
-
     os.system(f"melody_rnn_generate \
     --config=attention_rnn \
-     --bundle_file=/Users/singhyogendra/randomgen/AllInOneGenerator/timathon/AIG/gen_files/attention_rnn.mag \
+     --bundle_file={pathx}/attention_rnn.mag \
     --output_dir={path} \
     num_output=10 \
     num_steps=256 \
-    --primer_midi=/Users/singhyogendra/randomgen/AllInOneGenerator/timathon/AIG/gen_files/OmensOfLove.midi")
+    --primer_midi={pathx}/OmensOfLove.midi")
 
     # drums
     # os.system(f"drums_rnn_generate \
