@@ -1,10 +1,15 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<center><img src="{% static 'AIG/temp.jpg'%}" width="90%" height="40%"></center><br>
+<center><a class="btn btn-primary btn-lg" href="{% url 'image_gen' %}" role="button">Generate a new image</a></center>
+
 </body>
 </html>
+{% endblock %}

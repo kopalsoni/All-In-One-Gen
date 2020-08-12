@@ -12,7 +12,7 @@ def random_quote(formatted=False):
 
 def formatted_quote():
     author, quote = random_quote(formatted=True)
-    return f'Author: {author}\nQuote: {quote}'
+    return f'{quote} ~{author}'
 
 
 if __name__ == '__main__':
