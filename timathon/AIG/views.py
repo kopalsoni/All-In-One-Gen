@@ -20,6 +20,7 @@ def music_gen(request):
     music.music_gen(1)
     return render(request, 'music_gen.html')
 
+
 def maze_gen(request):
-    createMaze.run(20,20)
+    createMaze.run(20, 20)
     return render(request, 'maze_gen.html')

@@ -51,6 +51,6 @@ def random_images():
     # Convert to 8-bit, send to PIL and save
     img8Bit = np.uint8(np.rint(img.clip(0.0, 2.0) * 255.0))
     path = os.path.split(os.getcwd())[0]
-    path += "/timathon/AIG/static/AIG/"
+    path += "/timathon/AIG/static/assets/img/"
     Image.fromarray(img8Bit).save(f"{path}temp.jpg")
 
