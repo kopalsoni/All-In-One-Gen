@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .gen_files import quotes, rand_images, music
+from .gen_files import quotes, rand_images, music, createMaze
 
 
 def home(request):
@@ -19,3 +19,7 @@ def image_gen(request):
 def music_gen(request):
     music.music_gen(1)
     return render(request, 'music_gen.html')
+
+def maze_gen(request):
+    createMaze.run(20,20)
+    return render(request, 'maze_gen.html')
