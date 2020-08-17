@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .gen_files import quotes, rand_images, music, createMaze
+from .gen_files import quotes, rand_images, music, createMaze, passwordGen
 
 
 def home(request):
@@ -24,3 +24,12 @@ def music_gen(request):
 def maze_gen(request):
     createMaze.run(20, 20)
     return render(request, 'maze_gen.html')
+
+
+def password_gen(request):
+    if request.method == "POST":
+        x = request.POST.get("length", None)
+        ans = passwordGen.passw(int(x))
+        return render(request, 'password.html', {"data": ans})
+    return render(request, 'password.html')
+
