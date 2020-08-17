@@ -6,7 +6,8 @@ from pydub import AudioSegment
 def music_gen(choice):
     path = os.path.split(os.getcwd())[0]
     pathx = os.path.split(os.getcwd())[0]
-    path += "/timathon/AIG/static/AIG/tempmusic/"
+    # path += "/static/temp/"
+    path += "/timathon/AIG/static/temp/"
     count = 0
     # melody
     os.system(f"melody_rnn_generate \
@@ -57,5 +58,7 @@ def music_gen(choice):
         combined_sounds = sound1 + sound2 + sound3 + sound4 + sound5 + sound6 + sound7
         combined_sounds.export(f"{path}final.wav", format="wav")
 
-    for i in range(1, len(x) + 1):
+    for i in range(2, len(x) + 1):
         os.remove(f"{path}out{i}.wav")
+
+
