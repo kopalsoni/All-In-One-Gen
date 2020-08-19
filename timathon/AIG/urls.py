@@ -11,6 +11,7 @@ urlpatterns = [
                 path("music_gen", views.music_gen, name="music_gen"),
                 path("maze_gen", views.maze_gen, name="maze_gen"),
                 path("password", views.password_gen, name="password"),
+                path("color", views.color_gen, name="color"),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

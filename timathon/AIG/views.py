@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .gen_files import quotes, rand_images, music, createMaze, passwordGen
+from .gen_files import quotes, rand_images, music, createMaze, passwordGen, color
 
 
 def home(request):
@@ -33,3 +33,8 @@ def password_gen(request):
         return render(request, 'password.html', {"data": ans})
     return render(request, 'password.html')
 
+
+def color_gen(request):
+    x = color.hex()
+    y = color.rgb()
+    return render(request, 'color.html', {"hex": x, "rgb": y})
