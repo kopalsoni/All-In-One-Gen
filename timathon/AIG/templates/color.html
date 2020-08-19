@@ -11,7 +11,17 @@
             <a class="btn btn-primary btn-lg" href="{% url 'color' %}" role="button">Generate a new color</a><br><br>
                     <canvas width=300 height=150 id="canvas"></canvas>
 <!--                          <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>-->
-                    <h3>Hex value: #{{ hex }} RGB value:{{ rgb }}</h3>
+                    <h3 class="text-light font-weight-bold">
+                        <u>Hex Value</u>
+                        <br/>
+                        <h5 class="text-light">#{{ hex }}</h5>
+                    <h3 class="text-light font-weight-bold">  
+                        <br/>
+                        <u>RGB Value</u>
+                        <br/>
+                        <h5 class="text-light">{{ rgb }}</h5>
+                    </h3>
+
 
         </center>
     </div>
