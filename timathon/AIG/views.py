@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .gen_files import quotes, rand_images, music, createMaze, passwordGen, color
+from .gen_files import quotes, rand_images, music, createMaze, passwordGen, color, datetimeGen
 
 
 def home(request):
@@ -38,3 +38,7 @@ def color_gen(request):
     x = color.hex()
     y = color.rgb()
     return render(request, 'color.html', {"hex": x, "rgb": y})
+
+def datetime_gen(request):
+    date_and_time = datetimeGen.gen_datetime().strftime("%m/%d/%Y, %H:%M:%S")
+    return render(request, 'datetime_gen.html', {"data": date_and_time})

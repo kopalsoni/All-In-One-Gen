@@ -37,6 +37,4 @@ def random_time():
     return random.randint(0, 23), random.randint(0, 60), random.randint(0, 60)
 
 
-if __name__ == '__main__':
-    print(gen_datetime())
-    print(gen_time())
+
